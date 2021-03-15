@@ -38,7 +38,7 @@ $("[data-scroll]").on("click", function(event) {
     nav.removeClass("show");
 
     $("html, body").animate({
-       scrollTop: elementOffset - 72
+       scrollTop: elementOffset - 80
     }, 800);
 
 
