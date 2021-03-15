@@ -1,0 +1,481 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+   <title>startUp</title>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
+   <link rel="stylesheet" href="css/style.css">
+   <!-- <link rel="stylesheet" href="https://code.jquery.com/jquery-3.6.0.min.js"> -->
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Roboto+Slab&display=swap" rel="stylesheet">
+
+</head>
+<body>
+<!-- Sprite-->
+<svg style="display: none">
+    <symbol id="facebook" viewBox="0 0 96.124 96.123">
+        <g>
+            <path d="M72.089,0.02L59.624,0C45.62,0,36.57,9.285,36.57,23.656v10.907H24.037c-1.083,0-1.96,0.878-1.96,1.961v15.803
+		c0,1.083,0.878,1.96,1.96,1.96h12.533v39.876c0,1.083,0.877,1.96,1.96,1.96h16.352c1.083,0,1.96-0.878,1.96-1.96V54.287h14.654
+		c1.083,0,1.96-0.877,1.96-1.96l0.006-15.803c0-0.52-0.207-1.018-0.574-1.386c-0.367-0.368-0.867-0.575-1.387-0.575H56.842v-9.246
+		c0-4.444,1.059-6.7,6.848-6.7l8.397-0.003c1.082,0,1.959-0.878,1.959-1.96V1.98C74.046,0.899,73.17,0.022,72.089,0.02z"/>
+        </g>
+
+    </symbol>
+    <symbol id="twitter" viewBox="0 0 24 24">
+        <g>
+            <path d="m21.534 7.113c.976-.693 1.797-1.558 2.466-2.554v-.001c-.893.391-1.843.651-2.835.777 1.02-.609 1.799-1.566 2.165-2.719-.951.567-2.001.967-3.12 1.191-.903-.962-2.19-1.557-3.594-1.557-2.724 0-4.917 2.211-4.917 4.921 0 .39.033.765.114 1.122-4.09-.2-7.71-2.16-10.142-5.147-.424.737-.674 1.58-.674 2.487 0 1.704.877 3.214 2.186 4.089-.791-.015-1.566-.245-2.223-.606v.054c0 2.391 1.705 4.377 3.942 4.835-.401.11-.837.162-1.29.162-.315 0-.633-.018-.931-.084.637 1.948 2.447 3.381 4.597 3.428-1.674 1.309-3.8 2.098-6.101 2.098-.403 0-.79-.018-1.177-.067 2.18 1.405 4.762 2.208 7.548 2.208 8.683 0 14.342-7.244 13.986-14.637z"/>
+        </g>
+    </symbol>
+    <symbol id="linkedin" viewBox="-21 -35 682.66669 682">
+        <g>
+            <path d="m77.613281-.667969c-46.929687 0-77.613281 30.816407-77.613281 71.320313 0 39.609375 29.769531 71.304687 75.8125 71.304687h.890625c47.847656 0 77.625-31.695312 77.625-71.304687-.894531-40.503906-29.777344-71.320313-76.714844-71.320313zm0 0"/><path d="m8.109375 198.3125h137.195313v412.757812h-137.195313zm0 0"/><path d="m482.054688 188.625c-74.011719 0-123.640626 69.546875-123.640626 69.546875v-59.859375h-137.199218v412.757812h137.191406v-230.5c0-12.339843.894531-24.660156 4.519531-33.484374 9.917969-24.640626 32.488281-50.167969 70.390625-50.167969 49.644532 0 69.5 37.851562 69.5 93.339843v220.8125h137.183594v-236.667968c0-126.78125-67.6875-185.777344-157.945312-185.777344zm0 0"/>
+        </g>
+    </symbol>
+    <symbol id="google-plus" viewBox="0 0 604.35 604.35">
+        <g>
+            <path d="M516.375,255v-76.5h-51V255h-76.5v51h76.5v76.5h51V306h76.5v-51H516.375z M320.025,341.7l-28.051-20.4
+			c-10.2-7.649-20.399-17.85-20.399-35.7s12.75-33.15,25.5-40.8c33.15-25.5,66.3-53.55,66.3-109.65c0-53.55-33.15-84.15-51-99.45
+			h43.35l30.6-35.7h-158.1c-112.2,0-168.3,71.4-168.3,147.9c0,58.65,45.9,122.4,127.5,122.4h20.4c-2.55,7.65-10.2,20.4-10.2,33.15
+			c0,25.5,10.2,35.7,22.95,51c-35.7,2.55-102,10.2-150.45,40.8c-45.9,28.05-58.65,66.3-58.65,94.35
+			c0,58.65,53.55,114.75,168.3,114.75c137.7,0,204.001-76.5,204.001-150.449C383.775,400.35,355.725,372.3,320.025,341.7z
+			 M126.225,109.65c0-56.1,33.15-81.6,68.85-81.6c66.3,0,102,89.25,102,140.25c0,66.3-53.55,79.05-73.95,79.05
+			C159.375,247.35,126.225,168.3,126.225,109.65z M218.024,568.65c-84.15,0-137.7-38.25-137.7-94.351c0-56.1,51-73.95,66.3-81.6
+			c33.15-10.2,76.5-12.75,84.15-12.75s12.75,0,17.85,0c61.2,43.35,86.7,61.2,86.7,102C335.324,530.4,286.875,568.65,218.024,568.65z
+			"/>
+        </g>
+    </symbol>
+</svg>
+   <header class="header">
+      <div class="container">
+         <div class="header__inner">
+            <a href="index.html"><span class="header__logo">Startup</span></a>
+            <div class="toggle" id="btn">
+                <span class="toggle__item"></span>
+                <span class="toggle__item"></span>
+                <span class="toggle__item"></span>
+            </div>
+            <nav class="nav" id="nav">
+               <a href="#" class="nav__link" data-scroll="#intro">Home</a>
+               <a href="#" class="nav__link" data-scroll="#serv">Services</a>
+               <a href="#" class="nav__link" data-scroll="#about">About</a>
+               <a href="#" class="nav__link" data-scroll="#works">Works</a>
+               <a href="#" class="nav__link" data-scroll="#blog">Blog</a>
+               <a href="#" class="nav__link" data-scroll="#brands">Clients</a>
+               <a href="#" class="nav__link" data-scroll="#getIn">Contacts</a>
+            </nav>
+         </div>
+      </div>
+   </header>
+<!-- /header -->
+<div class="intro" id="intro">
+
+      <div class="intro__inner">
+         <h1 class="intro__title">Welcome to startup</h1>
+         <h2 class="intro__subtitle">You Favourite Creative Agency Template</h2>
+         <a href="#" class="btn">Get Started</a>
+      </div>
+
+</div><!-- /intro -->
+
+<!--Services-->
+<div class="container">
+   <div class="serv__title" id="serv"><span>Services</span></div>
+       <div class="serv__subtitle">We offer ipsum dolor sit amet, consetetur sadipscing elitr amet</div>
+       <div class="services">
+
+         <div class="service__item">
+
+           <img class="services__icon" src="img/service-1(hover).png" alt="">
+           <h4 class="services__title">Clean Typography</h4>
+           <div class="services__text"><p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima maxime quam architecto quo inventore harum ex magni, dicta impedit. Lorem ipsum.</p></div>
+           </div>
+
+             <div class="service__item">
+
+           <img class="services__icon" src="img/service-2.png" alt="">
+           <h4 class="services__title">Rock Solid Code</h4>
+           <div class="services__text"><p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima maxime quam architecto quo inventore harum ex magni, dicta impedit. Lorem ipsum.</p></div>
+           </div>
+
+             <div class="service__item">
+
+           <img class="services__icon" src="img/service-3.png" alt="">
+           <h4 class="services__title">Expert Support</h4>
+           <div class="services__text"><p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima maxime quam architecto quo inventore harum ex magni, dicta impedit. Lorem ipsum.</p></div>
+           </div>
+
+      </div>
+</div> <!--/container-->
+<!--About Us-->
+<div class="about__us" id="about">
+  <div class="container">
+     <div class="ab__title"><span>About us</span></div>
+      <div class="ab__subtitle">Lorem ipsum dolor sit amet, consetetur sadipscing elitr amet</div>
+      <div class="content">
+         <div class="ab__text">
+            <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sediam nonumy eirmod tempor invidunt ut labore et dolore aliquyam erat, sed diam voluptua. At vero eos et accusam et justo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor et dolore aliquyam erat. Lorem ipsum dolor sit amet. Lorem ipsum eat.</p>
+         </div>
+
+         <div class="ab__text">
+            <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sediam nonumy eirmod tempor invidunt ut labore et dolore aliquyam erat, sed diam voluptua. At vero eos et accusam et justo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor et dolore aliquyam erat. Lorem ipsum dolor sit amet. Lorem ipsum eat.</p>
+         </div>
+      </div> <!-- /.content -->
+    <!--  Team    -->
+      <section class="team" id="team">
+          <div class="team__inner">
+              <div class="team__item">
+                  <div class="team__img">
+                      <img src="img/team/Team-1.jpg" alt="team1" class="team__photo">
+                      <div class="team__content">
+                          <div class="team__social">
+                              <a href="#" class="social__link">
+                                  <svg class="social">
+                                      <use xlink:href="#facebook"></use>
+                                  </svg>
+                              </a>
+                              <a href="#" class="social__link">
+                                  <svg class="social">
+                                      <use xlink:href="#twitter"></use>
+                                  </svg></a>
+                              <a href="#" class="social__link">
+                                  <svg class="social">
+                                      <use xlink:href="#google-plus"></use>
+                                  </svg>
+                              </a>
+                              <a href="#" class="social__link">
+                                  <svg class="social">
+                                      <use xlink:href="#linkedin"></use>
+                                  </svg>
+                              </a>
+                          </div>
+                      </div>
+                  </div>
+                  <div class="team__name">Md. Khalil Uddin</div>
+                  <div class="team__prof">Head of Ideas</div>
+
+              </div>
+              <div class="team__item">
+                  <div class="team__img">
+                      <img src="img/team/Team-2.jpg" alt="team1" class="team__photo">
+                      <div class="team__content">
+                          <div class="team__social">
+                              <a href="#" class="social__link">
+                                  <svg class="social">
+                                      <use xlink:href="#facebook"></use>
+                                  </svg>
+                              </a>
+                              <a href="#" class="social__link">
+                                  <svg class="social">
+                                      <use xlink:href="#twitter"></use>
+                                  </svg></a>
+                              <a href="#" class="social__link">
+                                  <svg class="social">
+                                      <use xlink:href="#google-plus"></use>
+                                  </svg>
+                              </a>
+                              <a href="#" class="social__link">
+                                  <svg class="social">
+                                      <use xlink:href="#linkedin"></use>
+                                  </svg>
+                              </a>
+                          </div>
+                      </div>
+                  </div>
+                  <div class="team__name">Rubel Miah</div>
+                  <div class="team__prof">Lead WordPress Developer</div>
+              </div>
+              <div class="team__item">
+                  <div class="team__img">
+                      <img src="img/team/Team-3.jpg" alt="team1" class="team__photo">
+                      <div class="team__content">
+                          <div class="team__social">
+                              <a href="#" class="social__link">
+                                  <svg class="social">
+                                      <use xlink:href="#facebook"></use>
+                                  </svg>
+                              </a>
+                              <a href="#" class="social__link">
+                                  <svg class="social">
+                                      <use xlink:href="#twitter"></use>
+                                  </svg></a>
+                              <a href="#" class="social__link">
+                                  <svg class="social">
+                                      <use xlink:href="#google-plus"></use>
+                                  </svg>
+                              </a>
+                              <a href="#" class="social__link">
+                                  <svg class="social">
+                                      <use xlink:href="#linkedin"></use>
+                                  </svg>
+                              </a>
+                          </div>
+                      </div>
+                  </div>
+                  <div class="team__name">Shamim Mia</div>
+                  <div class="team__prof">Sr. Web Developer</div>
+              </div>
+              <div id="element-4" class="team__item">
+                  <div class="team__img">
+                      <img src="img/team/Team-4.jpg" alt="team1" class="team__photo">
+                      <div class="team__content">
+                          <div class="team__social">
+                              <a href="#" class="social__link">
+                                  <svg class="social">
+                                      <use xlink:href="#facebook"></use>
+                                  </svg>
+                              </a>
+                              <a href="#" class="social__link">
+                                  <svg class="social">
+                                      <use xlink:href="#twitter"></use>
+                                  </svg></a>
+                              <a href="#" class="social__link">
+                                  <svg class="social">
+                                      <use xlink:href="#google-plus"></use>
+                                  </svg>
+                              </a>
+                              <a href="#" class="social__link">
+                                  <svg class="social">
+                                      <use xlink:href="#linkedin"></use>
+                                  </svg>
+                              </a>
+                          </div>
+                      </div>
+                  </div>
+                  <div class="team__name">John Doe</div>
+                  <div class="team__prof">Front-end Developer</div>
+              </div>
+          </div>
+      </section> <!-- /Team -->
+  </div> <!-- /.Container -->
+</div>
+<!-- Works -->
+    <div class="works" id="works">
+        <div class="container">
+            <div class="works__title"><span>Latest Works</span></div>
+            <div class="works__nav">
+                <a class = 'works__link' href="#">All</a>
+                <a class = 'works__link' href="#">Branding</a>
+                <a class = 'works__link' href="#">Design</a>
+                <a class = 'works__link' href="#">Development</a>
+                <a class = 'works__link' href="#">Strategy</a>
+            </div>
+            <div class="works__case">
+                <div class="works__item">
+                    <div class="works__content">
+                        <h3 class="item__title">Hair Dresser</h3>
+                        <p class="item__subtitle">Branding</p>
+                    </div>
+                   
+                    <img src="img/works/works-1.jpg" class="works__photo" alt="">
+                </div>
+                <div class="works__item">
+                    <div class="works__content">
+                        <h3 class="item__title">Hair Dresser</h3>
+                        <p class="item__subtitle">Branding</p>
+                    </div>
+                    <img src="img/works/works-2.jpg" class="works__photo" alt="">
+                </div>
+                <div class="works__item">
+                    <div class="works__content">
+                        <h3 class="item__title">Hair Dresser</h3>
+                        <p class="item__subtitle">Branding</p>
+                    </div>
+                    <img class="works__photo" src="img/works/works-3.jpg" alt="">
+                </div>
+                <div class="works__item">
+                    <div class="works__content">
+                        <h3 class="item__title">Hair Dresser</h3>
+                        <p class="item__subtitle">Branding</p>
+                    </div>
+                    <img class="works__photo" src="img/works/works-4.jpg" alt="">
+                </div>
+                <div class="works__item">
+                    <div class="works__content">
+                        <h3 class="item__title">Hair Dresser</h3>
+                        <p class="item__subtitle">Branding</p>
+                    </div>
+                    <img class="works__photo" src="img/works/works-5.jpg" alt="">
+                </div>
+                <div class="works__item">
+                    <div class="works__content">
+                        <h3 class="item__title">Hair Dresser</h3>
+                        <p class="item__subtitle">Branding</p>
+                    </div>
+                    <img class="works__photo" src="img/works/works-6.jpg" alt="">
+                </div>
+                <div class="works__item">
+                    <div class="works__content">
+                        <h3 class="item__title">Hair Dresser</h3>
+                        <p class="item__subtitle">Branding</p>
+                    </div>
+                    <img class="works__photo" src="img/works/works-7.jpg" alt="">
+                </div>
+                <div class="works__item">
+                    <div class="works__content">
+                        <h3 class="item__title">Hair Dresser</h3>
+                        <p class="item__subtitle">Branding</p>
+                    </div>
+                    <img class="works__photo" src="img/works/works-8.jpg" alt="">
+                </div>
+                <div class="works__item">
+                    <div class="works__content">
+                        <h3 class="item__title">Hair Dresser</h3>
+                        <p class="item__subtitle">Branding</p>
+                    </div>
+                    <img class="works__photo" src="img/works/works-9.jpg" alt="">
+                </div>
+            </div>
+        </div>
+    </div>
+<!-- Сontact -->
+<div class="contact" id="contact">
+            <h4 class="contact__text">
+                Do you like OUR WORK so far?<br>Let's talk about YOUR PROJECT!
+            </h4>
+            <div><a href="#" class="btn diplay">Get in touch</a></div>
+</div>
+<!-- Blog -->
+<div class="container">
+    <div class="blog" id="blog">
+        <div class="blog__titles">
+            <h2 class="blog_title"><span>recent blog post</span></h2>
+            <h4 class="blog_subtitle">Lorem ipsum dolor sit amet, consetetur sadipscing elitr amet</h4>
+        </div>
+
+        <div class="blog__content">
+            <div class="blog__images">
+                <img src="img/blog/blog-1.jpg" alt="startup" class="blog__image">
+            </div>
+            <div class="blog__text">
+                <div class="first__texts">
+                    <div class="date">
+                        <span>18</span>
+                        <p>oct</p>
+                    </div>
+                    <div class="first__titles">
+                        <div class="content__title"><span class="red-span">Startup ideas needs to be funded </span></div>
+                        <div class="content__subtitle">By <span class="red-span">Khalil</span> Uddin in <span class="red-span">Development</span> </div>
+                    </div>
+                </div>
+                <div class="content__text">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod teduntlabore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et erebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit am Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidulabore et dolore aliquyam erat, sed diam </div>
+                <a href="#" class="blog__link">read more</a>
+            </div>    
+        </div>
+        <div class="blog__content">
+            <div class="blog__images">
+                <img src="img/blog/blog-2.jpg" alt="startup" class="blog__image">
+            </div>
+            <div class="blog__text">
+                <div class="first__texts">
+                    <div class="date">
+                        <span>18</span>
+                        <p>oct</p>
+                    </div>
+                    <div class="first__titles">
+                        <div class="content__title">User Interface Designing Elements </div>
+                        <div class="content__subtitle">By <span class="red-span">Khalil</span> Uddin in <span class="red-span">Development</span> </div>
+                    </div>
+                </div>
+                <div class="content__text">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod teduntlabore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et erebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor idunt ut labore et dolore aliquyam </div>
+                <a href="#" class="blog__link">read more</a>
+            </div>
+        </div>
+    </div> 
+</div>
+<!-- Brands -->
+<div class="brands" id="brands">
+    <div class="brands__name">
+       <img class="brands__img" src="img/brands/1.png" alt="brand-1" class="brand__icon">
+       <img class="brands__img" src="img/brands/2.png" alt="brand-2" class="brand__icon">
+       <img class="brands__img" src="img/brands/3.png" alt="brand-3" class="brand__icon">
+       <img class="brands__img" src="img/brands/4.png" alt="brand-4" class="brand__icon">
+       <img class="brands__img" src="img/brands/5.png" alt="brand-5" class="brand__icon"> 
+    </div>
+    <div class="brands__text">
+        <blockquote>
+            Hvaing placeat facere possimus, omnis voluptas assumenda est, omnis dolor repellendus. <br> Temporibus autem quibusdam et aut officiis debitis aut rerum”
+        </blockquote>
+        <p>John Doe, Google Inc.</p>
+    </div>
+</div>
+<!-- Get in touch -->
+<div class="container">
+    <div class="blog__titles" id="getIn">
+        <h2 class="blog_title"><span>get in touch</span></h2>
+        
+        <h4 class="blog_subtitle">Lorem ipsum dolor sit amet, consetetur sadipscing elitr amet</h4>
+    </div>
+    <div class="getInTouch">
+        <div class="contacts">
+            <div class="contacts__item">
+                <div class="contacts__icon">
+                    <img src="img/contactIcons/map.png" alt="map">     
+                </div>
+                <address class="contacts__content">
+                    <h4 class="contacts__title">Address</h4> 
+                    <div class="contacts__text">312, 7th Ave, New York</div>
+                    <div class="contacts__text">NY 101200, United States of America</div>
+                </address>
+            </div>
+            <div class="contacts__item">
+                <div class="contacts__icon">
+                    <img src="img/contactIcons/phone.png" alt="phone">
+                </div>
+                <div class="contact__content">
+                    <h4 class="contacts__title">Hotline (24x7)</h4>
+                    <div class="contacts__text">+65 0052 300, +65 88251 210</div>
+                    <div class="contacts__text">+88 01723 511 340</div>
+                </div>
+            </div>
+            <div class="contacts__item">
+                <div class="contacts__icon">
+                    <img src="img/contactIcons/mail.png" alt="mail"> 
+                </div>
+                <div class="contact__content">
+                    <h4 class="contacts__title">E-mail</h4>
+                    <div class="contacts__text">shapedtheme@gmail.com</div>
+                    <div class="contacts__text">khalilkode@gmail.com</div>
+                </div>
+            </div>
+        </div>
+        <div class="contacts__forms">
+            <div class="dates">
+                <form action="#">
+                    <input type="text" placeholder="YOUR NAME" >
+                    <input type="text" placeholder="YOUR E-MAIL">
+                    <input type="text" placeholder="YOUR SUBJECT">
+                    <input type="text" placeholder="COMPANY NAME">
+                </form>
+            </div>
+            <div class="message">
+                <form action="">
+                    <textarea name="" id="" cols="30" rows="10" placeholder="WRITE YOUR TEXT"></textarea>
+                </form>
+                <div class="btn-p">
+                    <a href="#" class="send-btn">SEND MESSAGE</a>
+                    <div>* We’ll contact you as as possible. We don’t reply on Monday.</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Footer -->
+<footer>
+    <div class="birds">
+        <span >
+            <a class="birds__link" href="https:\www.twitter.com"><img src="img/fa-twitter.png" alt="twitter"></a>
+            <a class="birds__link" href="https:\www.twitter.com"><img src="img/fa-twitter.png" alt="twitter"></a>
+            <a class="birds__link" href="https:\www.twitter.com"><img src="img/fa-twitter.png" alt="twitter"></a>
+            <a class="birds__link" href="https:\www.twitter.com"><img src="img/fa-twitter.png" alt="twitter"></a>
+        </span>
+    </div>
+    
+    <p class="footer-p">© 2015 Startup, Designed by ShapedTheme</p>
+</footer>
+
+<!-- JavaScript -->
+<script src="app.js"></script>
+</body>
+</html>
