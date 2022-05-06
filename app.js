@@ -4,7 +4,7 @@ const links = document.querySelector('.nav');
 const btn = document.querySelector('.toggle');
 
 //Nav Toggle
-
+//
 btn.addEventListener('click', function () {
   head.classList.toggle('red');
   links.classList.toggle('nav-show');
